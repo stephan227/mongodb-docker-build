@@ -1,4 +1,4 @@
-version: '3'
+version: '2.4'
 services:
     mongodb:
         image: mongo:latest
@@ -14,3 +14,6 @@ services:
         ports:
             - 27017:27017
         command: mongod --logpath=/dev/null # --quiet
+
+        mem_limit: 500m
+        mem_reservation: 100m
